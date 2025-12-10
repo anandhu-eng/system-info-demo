@@ -1,0 +1,122 @@
+{
+    "timestamp": "2025-12-09T08:07:29.830127",
+    "platform": {
+        "system": "Linux",
+        "node": "instance-20251209-060954",
+        "release": "6.1.0-41-cloud-amd64",
+        "version": "#1 SMP PREEMPT_DYNAMIC Debian 6.1.158-1 (2025-11-09)",
+        "machine": "x86_64",
+        "processor": ""
+    },
+    "cpu": {
+        "logical_cores": 4,
+        "physical_cores": 2,
+        "load_avg": [
+            0.1728515625,
+            0.08740234375,
+            0.072265625
+        ],
+        "cpu_percent": 0.0
+    },
+    "memory": {
+        "virtual_memory": {
+            "total": 16779554816,
+            "available": 15871787008,
+            "percent": 5.4,
+            "used": 907767808,
+            "free": 14730428416,
+            "active": 740962304,
+            "inactive": 1026441216,
+            "buffers": 74186752,
+            "cached": 1376698368,
+            "shared": 524288,
+            "slab": 130166784
+        },
+        "swap_memory": {
+            "total": 0,
+            "used": 0,
+            "free": 0,
+            "percent": 0.0,
+            "sin": 0,
+            "sout": 0
+        }
+    },
+    "disk": {
+        "disk_usage": {
+            "total": 52589998080,
+            "used": 30988099584,
+            "free": 19337117696,
+            "percent": 61.6
+        },
+        "partitions": [
+            {
+                "device": "/dev/nvme0n1p1",
+                "mountpoint": "/",
+                "fstype": "ext4",
+                "opts": "rw,relatime,discard,errors=remount-ro"
+            },
+            {
+                "device": "/dev/nvme0n1p15",
+                "mountpoint": "/boot/efi",
+                "fstype": "vfat",
+                "opts": "rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro"
+            }
+        ]
+    },
+    "bios": {
+        "vendor": "Skipped (requires sudo)",
+        "version": "Skipped (requires sudo)",
+        "release_date": "Skipped (requires sudo)"
+    },
+    "thp_settings": {
+        "enabled": "[always] madvise never",
+        "defrag": "always defer defer+madvise [madvise] never"
+    },
+    "kernel": {
+        "cmdline": "BOOT_IMAGE=/boot/vmlinuz-6.1.0-41-cloud-amd64 root=UUID=f9083126-5819-43b6-86e7-e7c7c014476c ro console=tty0 console=ttyS0,115200 earlyprintk=ttyS0,115200 consoleblank=0 intel_iommu=off"
+    },
+    "uptime": "740.99 2814.86",
+    "process_count": 130,
+    "users_sessions": [
+        {
+            "name": "anandhusooraj",
+            "terminal": "pts/0",
+            "host": "172.253.194.163",
+            "started": 1765267597.0,
+            "pid": 6552
+        }
+    ],
+    "container_context": {
+        "docker_env": false,
+        "cgroup_indicators": []
+    },
+    "mounted_filesystems": [
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0",
+        "udev /dev devtmpfs rw,nosuid,relatime,size=8181304k,nr_inodes=2045326,mode=755,inode64 0 0",
+        "devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,noexec,relatime,size=1638632k,mode=755,inode64 0 0",
+        "/dev/nvme0n1p1 / ext4 rw,relatime,discard,errors=remount-ro 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev,inode64 0 0",
+        "tmpfs /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k,inode64 0 0",
+        "cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=2626 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tracefs /sys/kernel/tracing tracefs rw,nosuid,nodev,noexec,relatime 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "ramfs /run/credentials/systemd-sysctl.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "ramfs /run/credentials/systemd-sysusers.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "ramfs /run/credentials/systemd-tmpfiles-setup-dev.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "/dev/nvme0n1p15 /boot/efi vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0",
+        "ramfs /run/credentials/systemd-tmpfiles-setup.service ramfs ro,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /run/user/1001 tmpfs rw,nosuid,nodev,relatime,size=1638628k,nr_inodes=409657,mode=700,uid=1001,gid=1002,inode64 0 0"
+    ]
+}

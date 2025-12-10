@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GPU Information</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>GPU Information</h1>
+    <h2 class="subtitle">Demo view of system information</h2>
+    <p><a href="../index.html">← Back</a></p>
+
+    <pre id="gpu-pre">Loading GPU info…</pre>
+
+    <script>
+    async function loadJsonPretty(url){
+      try{
+        const res = await fetch(url);
+        if(!res.ok) throw new Error(res.statusText);
+        const text = await res.text();
+        try{
+          const obj = JSON.parse(text);
+          return JSON.stringify(obj, null, 2);
+        }catch(e){
+          // not valid JSON, return raw
+          return text;
+        }
+      }catch(e){
+        return 'Error loading '+url+': '+e.message;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async ()=>{
+      const pre = document.getElementById('gpu-pre');
+      // file is named `cuda-devices-properties.json` in the repo's assets folder
+      pre.textContent = await loadJsonPretty('../assets/cuda-devices-properties.json');
+    });
+    </script>
+  </main>
+</body>
+</html>

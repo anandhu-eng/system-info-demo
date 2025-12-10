@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Core System Specs</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Core System Specs</h1>
+    <h2 class="subtitle">Demo view of system information</h2>
+    <p><a href="../index.html">← Back</a></p>
+
+    <pre id="core-pre">Loading system info…</pre>
+
+    <script>
+    async function loadRtfAsText(url){
+      try{
+        const res = await fetch(url);
+        if(!res.ok) throw new Error(res.statusText);
+        let text = await res.text();
+        // Basic RTF -> plain-text cleanup (keeps main readable content)
+        text = text.replace(/\\'[0-9a-fA-F]{2}/g,'');
+        text = text.replace(/\\[a-zA-Z]+-?[0-9]*/g,'');
+        text = text.replace(/[{}]/g,'');
+        // Normalize whitespace
+        text = text.replace(/\r\n|\r/g,'\n');
+        // Collapse sequences of multiple blank lines
+        text = text.replace(/\n{3,}/g,'\n\n');
+        return text.trim();
+      }catch(e){
+        return 'Error loading '+url+': '+e.message;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async ()=>{
+      const pre = document.getElementById('core-pre');
+      pre.textContent = await loadRtfAsText('../assets/system-info.txt.rtf');
+    });
+    </script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "hardware_ensemble": {
+    "processor": {
+      "host_processor_model_name": "Intel(R) Xeon(R) Platinum 8480+",
+      "host_processors_per_node": "2",
+      "host_processor_core_count": "112",
+      "host_processor_vcpu_count": "224"
+    },
+    "host_memory": {
+      "host_memory_capacity": "2.2T",
+      "host_memory_configuration": ""
+    },
+    "accelerator": {
+      "accelerator_model_name": "NVIDIA H100 80GB HBM3",
+      "accelerators_per_node": "8",
+      "accelerator_memory_capacity": "85GB",
+      "accelerator_memory_type": "HBM3",
+      "accelerator_interconnect": "NVLink",
+      "accelerator_host_interconnect": "PCIe Gen5 x16"
+    },
+    "networking": {
+      "host_network_card_count": "3",
+      "host_networking": "mlx5_0: native InfiniBand"
+    },
+    "storage": {
+      "host_storage_capacity": "19T",
+      "host_storage_type": "NVMe SSD"
+    }
+  },
+  "software_ensemble": {
+    "framework": "Cuda driver version 12.9 ; Cuda runtime version 12.9 ; ",
+    "operating_system": "linux debian ubuntu 24.04",
+    "filesystem": "ext4 vfat zfs",
+    "other_software_stack": "",
+    "sw_notes": ""
+  }
+}

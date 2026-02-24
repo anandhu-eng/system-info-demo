@@ -1,0 +1,117 @@
+{
+  "organization_metadata": {
+    "submitter_org_name": "Insert your organization name here",
+    "submitter_contact": "Insert a contact email here",
+    "submission_id": "Insert submission ID here",
+    "submission_date": "",
+    "publish_date": ""
+  },
+  "system_under_test": {
+    "system_metadata": {
+      "system_name": "Insert system name here",
+      "system_category": "Insert system category here",
+      "system_type_detail": "Insert system type detail here",
+      "system_node_ensemble_total": 2,
+      "system_availability_status": "Insert system availability status here"
+    },
+    "node_types": [
+      {
+        "system_node_ensemble_id": 0,
+        "number_of_nodes": 1,
+        "system_node_name": "Intel(R) Xeon(R) Platinum 8480+-NVIDIA H100 80GB HBM3",
+        "hardware_ensemble": {
+          "processor": {
+            "host_processor_model_name": "Intel(R) Xeon(R) Platinum 8480+",
+            "host_processors_per_node": "2",
+            "host_processor_core_count": "112",
+            "host_processor_vcpu_count": "224"
+          },
+          "host_memory": {
+            "host_memory_capacity": "2.2T",
+            "host_memory_configuration": ""
+          },
+          "accelerator": {
+            "accelerator_model_name": "NVIDIA H100 80GB HBM3",
+            "accelerators_per_node": "8",
+            "accelerator_memory_capacity": "85GB",
+            "accelerator_memory_type": "HBM3",
+            "accelerator_interconnect": "NVLink",
+            "accelerator_host_interconnect": "PCIe Gen5 x16"
+          },
+          "networking": {
+            "host_network_card_count": "3",
+            "host_networking": "mlx5_0: native InfiniBand"
+          },
+          "storage": {
+            "host_storage_capacity": "19T",
+            "host_storage_type": "NVMe SSD"
+          }
+        },
+        "software_ensemble": {
+          "framework": "Cuda driver version 12.9 ; Cuda runtime version 12.9 ; ",
+          "operating_system": "linux debian ubuntu 24.04",
+          "filesystem": "ext4 vfat zfs",
+          "other_software_stack": "",
+          "sw_notes": ""
+        }
+      },
+      {
+        "system_node_ensemble_id": 1,
+        "number_of_nodes": 1,
+        "system_node_name": "AMD EPYC 9354 32-Core Processor-NVIDIA L40S",
+        "hardware_ensemble": {
+          "processor": {
+            "host_processor_model_name": "AMD EPYC 9354 32-Core Processor",
+            "host_processors_per_node": "2",
+            "host_processor_core_count": "64",
+            "host_processor_vcpu_count": "128"
+          },
+          "host_memory": {
+            "host_memory_capacity": "773G",
+            "host_memory_configuration": ""
+          },
+          "accelerator": {
+            "accelerator_model_name": "NVIDIA L40S",
+            "accelerators_per_node": "1",
+            "accelerator_memory_capacity": "47GB",
+            "accelerator_memory_type": "GDDR6",
+            "accelerator_interconnect": "PCIe",
+            "accelerator_host_interconnect": "PCIe Gen1 x16"
+          },
+          "networking": {
+            "host_network_card_count": "0",
+            "host_networking": "RDMA devices found but no link layer info"
+          },
+          "storage": {
+            "host_storage_capacity": "3.3T",
+            "host_storage_type": "NVMe SSD"
+          }
+        },
+        "software_ensemble": {
+          "framework": "Cuda driver version 12.4 ; Cuda runtime version 12.4 ; ",
+          "operating_system": "linux debian ubuntu 22.04",
+          "filesystem": "ext4 xfs",
+          "other_software_stack": "",
+          "sw_notes": ""
+        }
+      }
+    ]
+  },
+  "model_metadata": {
+    "division": "Insert model division here",
+    "model_id": "Insert model id here",
+    "model_name": "Insert model name here",
+    "model_precision": "Insert model precision here",
+    "link_to_model": "Insert link to model here",
+    "link_to_model_transformations": "Insert link to model transformations here",
+    "model_notes": "Insert any relevant notes about the model here"
+  },
+  "dataset_metadata": {
+    "dataset_id": "Insert dataset name here",
+    "dataset_name": "Insert dataset name here",
+    "input_token_average": "Insert dataset input token average here",
+    "output_token_average": "Insert dataset output token average here",
+    "dataset_type": "Insert dataset type here",
+    "dataset_link": "Insert link to dataset here"
+  }
+}

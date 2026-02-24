@@ -1,0 +1,37 @@
+{
+  "hardware_ensemble": {
+    "processor": {
+      "host_processor_model_name": "AMD EPYC 9354 32-Core Processor",
+      "host_processors_per_node": "2",
+      "host_processor_core_count": "64",
+      "host_processor_vcpu_count": "128"
+    },
+    "host_memory": {
+      "host_memory_capacity": "773G",
+      "host_memory_configuration": ""
+    },
+    "accelerator": {
+      "accelerator_model_name": "NVIDIA L40S",
+      "accelerators_per_node": "1",
+      "accelerator_memory_capacity": "47GB",
+      "accelerator_memory_type": "GDDR6",
+      "accelerator_interconnect": "PCIe",
+      "accelerator_host_interconnect": "PCIe Gen1 x16"
+    },
+    "networking": {
+      "host_network_card_count": "0",
+      "host_networking": "RDMA devices found but no link layer info"
+    },
+    "storage": {
+      "host_storage_capacity": "3.3T",
+      "host_storage_type": "NVMe SSD"
+    }
+  },
+  "software_ensemble": {
+    "framework": "Cuda driver version 12.4 ; Cuda runtime version 12.4 ; ",
+    "operating_system": "linux debian ubuntu 22.04",
+    "filesystem": "ext4 xfs",
+    "other_software_stack": "",
+    "sw_notes": ""
+  }
+}

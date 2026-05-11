@@ -1,0 +1,143 @@
+{
+  "organization_metadata": {
+    "submitter_org_name": "MLCOMMONS",
+    "submitter_contact": "user@mlcommons.org",
+    "submission_id": "abcd1234",
+    "submission_date": "09-05-2024",
+    "publish_date": "27-05-2024"
+  },
+  "system_under_test": {
+    "system_metadata": {
+      "system_name": "1x(Intel(R) Core(TM) i9-14900KS-NVIDIA GeForce RTX 5060 Ti), 1x(Intel(R) Xeon(R) Platinum 8480+-NVIDIA 8xH100 80GB HBM3)",
+      "system_category": "Datacenter",
+      "system_type_detail": "Cloud",(This field is crossed in per submission data dictionary, should we not include this field?)
+      "system_availability_status": "Available",
+      "system_size": "9", OR "system_size": "1xNVIDIA GeForce RTX 5060 Ti + 8xNVIDIA H100 80GB HBM3" (how do we expect the value to be here?) 
+      "system_node_ensemble_count": 2,
+      "system_node_ensemblt_total": 9,
+    },
+    "node_types": [
+      {
+        "system_node_ensemble_id": 0,
+        "number_of_nodes": 1,
+        "system_node_name": "Intel(R) Core(TM) i9-14900KS-NVIDIA GeForce RTX 5060 Ti",(not in data dictionary, but we have included this to have a name for each node)
+        "hardware_ensemble": {
+          "processor": {
+            "host_processor_model_name": "Intel(R) Core(TM) i9-14900KS",
+            "host_processors_per_node": "1",
+            "host_processor_core_count": "24",
+            "host_processor_vcpu_count": "32"
+          },
+          "host_memory": {
+            "host_memory_capacity": "16G",
+            "host_memory_configuration": "2 x 16GB DDR5-4800"
+          },
+          "accelerator": {
+            "accelerator_model_name": "NVIDIA GeForce RTX 5060 Ti",
+            "accelerators_per_node": "1",
+            "accelerator_memory_capacity": "16GB",
+            "accelerator_memory_type": "GDDR7",
+            "accelerator_interconnect": "PCIe",
+            "accelerator_host_interconnect": "PCIe Gen5 x8"
+          },
+          "networking": {
+            "host_network_card_count": "2",
+            "host_networking": "Ethernet"
+          },
+          "storage": {
+            "host_storage_capacity": "927G", (either we could show the total storage capacity or we could show more detailed way)
+            			OR
+            "host_storage_capacity: [
+  					{"filesystem": "tmpfs",          "size": "1.6G", "mount": "/run"},
+  					{"filesystem": "/dev/nvme0n1p2", "size": "915G", "mount": "/"},
+  					{"filesystem": "tmpfs",          "size": "7.7G", "mount": "/dev/shm"},
+  					{"filesystem": "tmpfs",          "size": "5.0M", "mount": "/run/lock"},
+  					{"filesystem": "efivarfs",       "size": "256K", "mount": "/sys/firmware/efi/efivars"},
+  					{"filesystem": "/dev/nvme0n1p1", "size": "1.1G", "mount": "/boot/efi"},
+  					{"filesystem": "tmpfs",          "size": "1.6G", "mount": "/run/user/1000"}
+	    ],
+            "host_storage_type": "NVMe SSD"
+          },
+          "other_hardware": "any other hardware to be filled manually by user",
+          "cooling": "Air cooled",
+          "hw_notes": "any other notes regarding hardware",
+        },
+        "software_ensemble": {
+          "framework": "Cuda driver version 13.0 ; Cuda runtime version 12.0 ; ",(framework appears to be crossed off -- do we not want the field or are we expecting to be nested?)
+          	OR
+          "framework": {
+          	"serving_framework": "vllm",
+          	"inference_backend": "OpenAI",
+          	"driver": "cuda v13.0",
+          	"container_link": "https://link/to/the/container"
+          },
+          "operating_system": "linux debian ubuntu 24.04",
+          "filesystem": "ext4 vfat",
+          "other_software_stack": "",
+          "sw_notes": ""
+        }
+      },
+      {
+        "system_node_ensemble_id": 0,
+        "number_of_nodes": 1,
+        "system_node_name": "Intel(R) Xeon(R) Platinum 8480+-NVIDIA H100 80GB HBM3",
+        "hardware_ensemble": {
+          "processor": {
+            "host_processor_model_name": "Intel(R) Xeon(R) Platinum 8480+",
+            "host_processors_per_node": "2",
+            "host_processor_core_count": "112",
+            "host_processor_vcpu_count": "224"
+          },
+          "host_memory": {
+            "host_memory_capacity": "2.2T",
+            "host_memory_configuration": ""
+          },
+          "accelerator": {
+            "accelerator_model_name": "NVIDIA H100 80GB HBM3",
+            "accelerators_per_node": "8",
+            "accelerator_memory_capacity": "85GB",
+            "accelerator_memory_type": "HBM3",
+            "accelerator_interconnect": "",
+            "accelerator_host_interconnect": ""
+          },
+          "networking": {
+            "host_network_card_count": "3",
+            "host_networking": "mlx5_0: native InfiniBand"
+          },
+          "storage": {
+            "host_storage_capacity": "20T",
+            "host_storage_type": "No disk layout data found"
+          },
+          "other_hardware": "any other hardware to be filled manually by user",
+          "cooling": "Air cooled",
+          "hw_notes": "any other notes regarding hardware",
+        },
+        "software_ensemble": {
+          "framework": "Cuda driver version 12.9 ; Cuda runtime version 12.9 ; ",
+          "operating_system": "linux debian ubuntu 24.04",
+          "filesystem": "ext4 vfat zfs",
+          "other_software_stack": "",
+          "sw_notes": ""
+        }
+      }
+    ]
+  },
+  "model_metadata": {
+    "division": "closed",
+    "model_id": "#1s5",
+    "model_name": "llama2-70b",
+    "model_precision": "fp16",
+    "link_to_model": "https://link/to/model",
+    "link_to_model_transformations": "https://link/to/model/transformations",
+    "model_notes": "Taken from huggingface",
+  },
+  "dataset_metadata": {
+    "dataset_id": "#321",
+    "dataset_name": "openorca",
+    "input_token_average": "1234",
+    "output_token_average": "12334",
+    "dataset_type": "Performance",
+    "dataset_link": "https://link/to/dataset",
+    "measured_accuracy_score": "46.3",
+  }
+}
